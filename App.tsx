@@ -1,22 +1,14 @@
 import React from "react";
-import {
-  StyleSheet,
-  SafeAreaView,
-} from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+
+import OpeningScreen from "./screens/Opening";
+import MainStack from "./screens/Router";
 
 export default function App() {
 
   return (
-    <SafeAreaView style={styles.container}>
-
-    </SafeAreaView>
+    <NavigationContainer>
+      <MainStack />
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    // alignItems: 'center',
-    // justifyContent: 'center',
-  },
-});

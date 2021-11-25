@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import {
   View,
   StyleSheet,
@@ -7,17 +7,9 @@ import {
   Button,
   SafeAreaView,
 } from "react-native";
-import Hero from "../components/hero";
+import Hero from "../../components/hero";
 
-const Main = () => {
-  const fadeAnim = useRef(new Animated.Value(0)).current;
-
-  useEffect(() => {
-    Animated.timing(fadeAnim, {
-      toValue: 1,
-      duration: 5000,
-    }).start();
-  }, []);
+const HomeScreen = () => {
 
   return (
     <SafeAreaView>
@@ -42,4 +34,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Main;
+export default HomeScreen

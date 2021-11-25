@@ -1,3 +1,3 @@
-import OpeningScreen from "./opening";
+import OpeningScreen from "./OpeningScreen";
 
 export default OpeningScreen;
