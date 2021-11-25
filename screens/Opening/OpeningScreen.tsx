@@ -1,13 +1,19 @@
 import React from "react"
-import { View, Image, StyleSheet, Button } from 'react-native'
+import { View, StyleSheet, Button } from 'react-native'
 
-const OpeningScreen = () => {
+
+const OpeningScreen = ({navigation}) => {
 
     const goToLoginScreen = () => {
+        navigation.navigate('Auth', {
+            screen: 'Login',
+        })
     }
 
     const goToSignupScreen = () => {
-        console.log('hello')
+        navigation.navigate('Auth', {
+            screen: 'CreateAccount',
+        })
     }
 
     const goToHomeScreen = () => {
