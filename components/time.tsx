@@ -1,23 +1,31 @@
-import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import React from "react"
+import { View, Text, StyleSheet } from "react-native"
 
-interface Props {
-  last_refresh?: Date | string;
-}
+const Time = () => {
 
-const Time: React.FC<Props> = ({ last_refresh }) => {
-  const localTime = last_refresh?.toLocaleString();
+  const fetchTimeHour = () => {
+    let time = new Date()
+
+    if (time.getHours() >= 5 && time.getHours() < 12) return 'Good Morning'
+    if (time.getHours() >= 12 && time.getHours() < 19) return 'Good Afternoon'
+    if (time.getHours() >= 19 && time.getHours() < 5) return 'Good Evening'
+  }
 
   return (
-    <View>
-      <Text>{localTime}</Text>
+    <View style={styles.container}>
+      <Text style={styles.timeText}>{fetchTimeHour()}</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {},
-  timeText: {},
+  container: {
+    marginTop: 20,
+    alignItems: 'center',
+  },
+  timeText: {
+    fontSize: 24,
+  },
 });
 
 export default Time;

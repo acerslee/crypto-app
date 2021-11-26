@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import AuthStack, {AuthParamsList} from "./Auth/Router";
 import OpeningScreen from "./Opening";
+import HomeScreen from "./Home";
 
 const Stack = createNativeStackNavigator()
 
@@ -13,6 +14,7 @@ const MainStack = () => {
         <Stack.Navigator>
             <Stack.Screen name={'Opening'} component = {OpeningScreen} />
             <Stack.Screen name={'Auth'} component={AuthStack} />
+            <Stack.Screen name={'Home'} component={HomeScreen} />
         </Stack.Navigator>
     )
 }

@@ -2,7 +2,7 @@ import React from "react"
 import { View, StyleSheet, Button } from 'react-native'
 
 
-const OpeningScreen = ({navigation}) => {
+const OpeningScreen = ({ navigation }) => {
 
     const goToLoginScreen = () => {
         navigation.navigate('Auth', {
@@ -17,7 +17,7 @@ const OpeningScreen = ({navigation}) => {
     }
 
     const goToHomeScreen = () => {
-        console.log('hello')
+        navigation.navigate('Home')
     }
 
     return(
