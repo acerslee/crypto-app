@@ -8,7 +8,7 @@ app.use(express.json())
 
 app.get('/tickers', async (req, res) => {
     try {
-
+        res.send('testing')
     } catch(e) {
         res.status(500).send(e)
     }
